@@ -3,7 +3,7 @@ const Todo=require('../models/Todo')
 //routes
 
 router.post("/add/todo",(req,res)=>{
-    const {todo}=res.json(req.body);
+    const {todo}=res.json(req.body);// 
     console.log(req.body);
     //res.json(req.body)
 
@@ -18,7 +18,7 @@ router.post("/add/todo",(req,res)=>{
     })
     .catch((err)=>console.log(err))
 })
-
+// delete the todo
 .get("/delete/todo/:_id", (req, res) => {
     const { _id } = req.params;
     Todo.deleteOne({ _id })
